@@ -1,0 +1,34 @@
+.menu{
+    right: -25%;
+    transition: all .4s;
+}
+.menu.active{
+    right: 0;
+}
+.btn-menu{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+}
+.btn-menu div{
+    width: 100%;
+    height: 4px;
+    background: teal;
+    margin-bottom: 6px;
+    border-radius: 10%;
+    transition: all .4s;
+}
+.btn-menu.active div:nth-child(2){ /*btn裡面第二個div*/
+    transform: scaleX(0); /*左右縮放至消失*/
+    
+}
+.btn-menu.active div:first-child{ /*btn裡面第1個div*/
+    transform: translateY(10px) rotate(45deg);
+  
+}
+.btn-menu.active div:last-child{ /*btn裡面最後1個div*/
+    transform: translateY(-10px) rotate(-45deg);
+ 
+}
